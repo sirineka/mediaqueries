@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive basics</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        html{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header, footer{
+            background-color:purple;
+            color: white;
+            padding: 15px;
+        }
+
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li{
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 3px #cccccc, 0 1px 2px #1a1919;
+        }
+
+        nav ul li:hover{
+            background-color: rgb(61, 107, 153);
+            cursor: pointer;
+        }
+
+        .right{
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        .right ul{
+            list-style: none;
+        }
+
+        .right ul li {
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .row::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        [class*="col-"]{
+            float: left;
+            padding: 15px;
+            }
+
+        .col-12{
+            width: 100%;
+        }
+        .col-9{
+            width: 75%;
+        }
+        .col-6{
+            width: 50%;
+        }
+        .col-3{
+            width: 25%;
+        }
+
+        /* Pour les fenêtres dont la largeur est inférieure à 768px
+        Toutes les colonnes font 100 % */
+        @media only screen and (max-width: 768px){
+            /* le mobile est là */
+            [class*="col-"]{
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <section class="row">
+
+        <nav>
+            <ul class="col-3">
+                <li>Home</li>
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+
+        <div class="col-6">
+            <h2>Home of the Responsive Web Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae a iste facere ab autem architecto minus earum quis? Voluptates adipisci id reprehenderit, voluptas qui pariatur error neque cupiditate omnis architecto accusamus suscipit, enim dolores sequi officiis, beatae esse quas laudantium soluta nostrum exercitationem consequatur eligendi laboriosam sit? Dolorem, veniam sunt, voluptatibus quidem vero esse reprehenderit soluta, minima repellendus corrupti rerum dolor laudantium delectus quos officia sit sequi deleniti exercitationem nemo ipsa? Modi laudantium dolore, saepe delectus quibusdam atque nesciunt eum, sunt numquam officiis ipsum eius! Vero praesentium tenetur ullam animi. Exercitationem expedita, adipisci a magni, assumenda reprehenderit esse non, in dolore qui amet nobis numquam dolorem incidunt maiores corporis ipsa repellendus modi sint? Eius cumque numquam natus quae alias dolorem pariatur suscipit voluptas eum porro harum veniam, quidem, necessitatibus ipsa! Quam alias aliquid accusamus aspernatur veritatis autem sint? Sit voluptas optio alias? Ullam odio tempore tempora eligendi voluptatum voluptas ratione, provident deserunt laudantium dignissimos, distinctio vitae?</p>
+        </div>
+
+        <div class="col-3 right">
+            <h3>Side Menu</h3>
+            <ul>
+                <li>What ?</li>
+                <li>Where ?</li>
+                <li>Who ?</li>
+                <li>How ?</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Footer</h3>
+    </footer>
+</body>
+</html>
